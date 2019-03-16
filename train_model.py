@@ -80,7 +80,7 @@ def Lstm_model(embeddings):
 
 os.environ["CUDA_VISIBLE_DEVICES"]="1,2" # 使用编号为1，2号的GPU
 config = tf.ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = 0.7 # 每个GPU现存上届控制在60%以内
+config.gpu_options.per_process_gpu_memory_fraction = 0.7 # 每个GPU现存上届控制在70%以内
 session = tf.Session(config=config)
 KTF.set_session(session)
 
