@@ -85,7 +85,7 @@ session = tf.Session(config=config)
 KTF.set_session(session)
 
 model = Lstm_model(embeddings)
-model.fit(data_train,labels,epochs=100, batch_size=64, verbose=1)
+model.fit(data_train,labels,epochs=20, batch_size=64, verbose=1)
 y_pred = model.predict(data_test)
 y_pred_idx = [1 if prob[0] > 0.5 else 0 for prob in y_pred]
 
